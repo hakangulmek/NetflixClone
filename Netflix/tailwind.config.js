@@ -7,6 +7,9 @@ export default {
         "gradient-stop": "#000001",
         "logo-color": "#E50914",
       },
+      maxWidth: {
+        "custom-calc": "calc(100% - 4rem)",
+      },
     },
   },
   plugins: [],
