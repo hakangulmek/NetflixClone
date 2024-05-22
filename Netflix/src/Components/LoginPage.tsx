@@ -1,7 +1,7 @@
-import React from "react";
 import Navbar from "../Components/Navbar";
 import HeaderImg from "../netflix-img/images/header-image.png";
 import Login from "./view/Login";
+
 function LoginPage() {
   return (
     <div>

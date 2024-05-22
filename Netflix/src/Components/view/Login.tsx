@@ -1,4 +1,3 @@
-import React from "react";
 import { TbArrowBigRightLinesFilled } from "react-icons/tb";
 
 function Login() {

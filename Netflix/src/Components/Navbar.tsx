@@ -1,7 +1,7 @@
-import React from "react";
 import ReactFlagsSelect from "react-flags-select";
 import { useState } from "react";
 import logo from "../netflix-img/images/logo.png";
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
   const [selected, setSelected] = useState("ES");
@@ -11,6 +11,11 @@ function Navbar() {
     FR: "FRANCH",
     IT: "ITALY",
     ES: "SPANİSH",
+  };
+
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/Loginstart");
   };
 
   return (
@@ -29,7 +34,11 @@ function Navbar() {
               />
             </div>
             <div className="rounded-lg bg-logo-color w-full ">
-              <a className="text-xs font-serif p-6 text-white" href="#">
+              <a
+                onClick={handleClick}
+                className="text-xs font-serif p-6 text-white"
+                href=""
+              >
                 OTURUM AÇ
               </a>
             </div>
