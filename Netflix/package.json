@@ -11,6 +11,8 @@
     "watch": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
   },
   "dependencies": {
+    "@headlessui/react": "^2.0.3",
+    "dotenv": "^16.4.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-flags-select": "^2.2.3",
