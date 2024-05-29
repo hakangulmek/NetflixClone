@@ -8,3 +8,18 @@
 .flag-select button > span span:nth-child(2) {
   @apply text-xs text-white;
 }
+.slick-list div {
+  @apply flex h-full pl-2 py-1 w-[1000px];
+}
+.slick-slider div {
+  @apply h-full;
+}
+.slick-list div > div div div {
+  @apply w-48;
+}
+.slick-list button {
+  @apply absolute bg-white right-0 w-5 h-4;
+}
+.slick-list div > div div div img {
+  @apply h-full;
+}

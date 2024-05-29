@@ -4,7 +4,7 @@ import Login from "./view/Login";
 
 function LoginPage() {
   return (
-    <div>
+    <div className="">
       <div className="p-[40px_0_40px_0] min-h-[600px]">
         <div className="h-full left-0 absolute top-0 w-full">
           <div className=" h-full absolute  w-full ">

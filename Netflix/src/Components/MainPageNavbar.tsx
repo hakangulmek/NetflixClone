@@ -30,9 +30,9 @@ function MainPageNavbar() {
     };
   }, [handleClickOutside]);
   return (
-    <div className="h-20 pl-20">
+    <div className="h-20 pl-2 flex">
       <div className="justify-between h-auto px-10 pt-6 flex">
-        <div className="h-auto w-[800px] flex">
+        <div className="h-auto w-[680px] flex">
           <div className="w-32 h-8 mr-12">
             <img className="h-auto" src={logo} alt="" />
           </div>
@@ -59,13 +59,14 @@ function MainPageNavbar() {
             </ul>
           </div>
         </div>
-        <div className="flex w-[500px] pt-[10px] p-4">
-          <div className="">
+        <div className="flex w-[700px] pt-[10px] p-4 pl-80">
+          <div className="relative inline-block">
             {visibleInput ? (
               <input
                 type="text"
                 ref={inputRef}
-                className="border border-gray-300 bg-slate-500 bg-opacity-15 text-white rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-slate-400 caret-white transition-all"
+                style={{ transform: "translateX(-100%)" }}
+                className="border absolute left-0 border-gray-300 bg-slate-500 bg-opacity-15 text-white  rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-slate-400 caret-white "
               />
             ) : (
               <button className="pt-2">
@@ -83,97 +84,96 @@ function MainPageNavbar() {
               <FaRegBell size={30} className="text-white" />
             </a>
           </div>
-          <div className="fixed w-56 text-right text-white">
-            <Menu as="nav" className={"relative inline-block text-left"}>
-              <MenuButton
+        </div>
+      </div>
+      <div className="flex absolute left-[1050px] pt-8">
+        <div className=" w-56 text-right text-white relative">
+          <Menu as="nav" className={"relative inline-block text-left"}>
+            <MenuButton
+              as="div"
+              className={
+                "pb-2 pr-6 inline-flex w-full justify-center rounded-md bg-black/20 text-sm font-medium text-white hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75"
+              }
+            >
+              <img
+                src="https://occ-0-7292-1432.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABTZ2zlLdBVC05fsd2YQAR43J6vB1NAUBOOrxt7oaFATxMhtdzlNZ846H3D8TZzooe2-FT853YVYs8p001KVFYopWi4D4NXM.png?r=229"
+                alt=""
+              />
+            </MenuButton>
+            <div className="">
+              <MenuItems
                 as="div"
+                anchor="bottom"
                 className={
-                  "pb-2 pr-6 inline-flex w-full justify-center rounded-md bg-black/20 text-sm font-medium text-white hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 left-[990px]"
+                  "inline-flex w-42 rounded-md bg-slate-600 bg-opacity-15 pr-28 text-sm font-medium text-white hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 "
                 }
               >
-                <img
-                  src="https://occ-0-7292-1432.1.nflxso.net/dnm/api/v6/vN7bi_My87NPKvsBoib006Llxzg/AAAABTZ2zlLdBVC05fsd2YQAR43J6vB1NAUBOOrxt7oaFATxMhtdzlNZ846H3D8TZzooe2-FT853YVYs8p001KVFYopWi4D4NXM.png?r=229"
-                  alt=""
-                />
-              </MenuButton>
-              <div className="">
-                <MenuItems
-                  as="div"
-                  anchor="bottom"
-                  className={
-                    "inline-flex w-42 rounded-md bg-slate-600 bg-opacity-15 pr-28 text-sm font-medium text-white hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 "
-                  }
-                >
-                  <div className="px-1 py-1 relative w-full max-w-14">
-                    <MenuItem>
-                      <div className="flex  gap-x-12 ">
-                        <a
-                          className="flex  items-center rounded-md px-2 py-2 text-sm"
-                          href="/settings"
-                        >
-                          Profil Yönetimi
-                        </a>
-                        <div className="flex items-center">
-                          <FaPencilAlt
-                            size={20}
-                            className="flex items-center pl-1 "
-                          />
-                        </div>
+                <div className="px-1 py-1 relative w-full max-w-14">
+                  <MenuItem>
+                    <div className="flex  gap-x-12 ">
+                      <a
+                        className="flex  items-center rounded-md px-2 py-2 text-sm"
+                        href="/settings"
+                      >
+                        Profil Yönetimi
+                      </a>
+                      <div className="flex items-center">
+                        <FaPencilAlt
+                          size={20}
+                          className="flex items-center pl-1 "
+                        />
                       </div>
-                    </MenuItem>
-                    <MenuItem>
-                      <div className="flex  gap-x-16 ">
-                        <a
-                          className="flex  items-center rounded-md px-2 py-2 text-sm"
-                          href="/settings"
-                        >
-                          Profil Aktar
-                        </a>
-                        <div className="flex items-center">
-                          <LuSmilePlus
-                            size={30}
-                            className="flex items-center pl-1 "
-                          />
-                        </div>
+                    </div>
+                  </MenuItem>
+                  <MenuItem>
+                    <div className="flex  gap-x-16 ">
+                      <a
+                        className="flex  items-center rounded-md px-2 py-2 text-sm"
+                        href="/settings"
+                      >
+                        Profil Aktar
+                      </a>
+                      <div className="flex items-center">
+                        <LuSmilePlus
+                          size={30}
+                          className="flex items-center pl-1 "
+                        />
                       </div>
-                    </MenuItem>
-                    <MenuItem>
-                      <div className="flex  gap-x-16 ">
-                        <a
-                          className="flex  items-center rounded-md px-2 py-2 text-sm"
-                          href="/settings"
-                        >
-                          Hesap
-                        </a>
-                        <div className="flex items-center">
-                          <FaUser
-                            size={25}
-                            className="flex items-center pl-1 "
-                          />
-                        </div>
+                    </div>
+                  </MenuItem>
+                  <MenuItem>
+                    <div className="flex  gap-x-16 ">
+                      <a
+                        className="flex  items-center rounded-md px-2 py-2 text-sm"
+                        href="/settings"
+                      >
+                        Hesap
+                      </a>
+                      <div className="flex items-center">
+                        <FaUser size={25} className="flex items-center pl-1 " />
                       </div>
-                    </MenuItem>
-                    <MenuItem>
-                      <div className="flex  gap-x-12 ">
-                        <a
-                          className="flex  items-center rounded-md px-2 py-2 text-sm"
-                          href="/settings"
-                        >
-                          Yardım Merkezi
-                        </a>
-                        <div className="flex items-center">
-                          <FaRegQuestionCircle
-                            size={30}
-                            className="flex items-center pl-1 "
-                          />
-                        </div>
+                    </div>
+                  </MenuItem>
+                  <MenuItem>
+                    <div className="flex  gap-x-12 ">
+                      <a
+                        className="flex  items-center rounded-md px-2 py-2 text-sm"
+                        href="/settings"
+                      >
+                        Yardım Merkezi
+                      </a>
+                      <div className="flex items-center">
+                        <FaRegQuestionCircle
+                          size={30}
+                          className="flex items-center pl-1 "
+                        />
                       </div>
-                    </MenuItem>
-                  </div>
-                </MenuItems>
-              </div>
-            </Menu>
-          </div>
+                    </div>
+                  </MenuItem>
+                </div>
+              </MenuItems>
+            </div>
+          </Menu>
         </div>
       </div>
     </div>
